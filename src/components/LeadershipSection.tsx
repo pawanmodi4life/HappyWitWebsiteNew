@@ -12,7 +12,7 @@ export default function LeadershipSection() {
     <div className="w-full">
       <div className="mx-auto mb-16 max-w-4xl text-center">
         <div className="inline-flex items-center gap-1.5 rounded-full bg-[#EEF3FF] px-3 py-1 text-xs font-semibold text-[#2563EB]">
-          <ShieldCheck size={13} /> HappyWit Directors
+          <ShieldCheck size={13} /> HappyWit Leadership Team
         </div>
         <h2 className="mt-3 font-display text-4xl font-black tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
           Creativity With Purpose.<br />Experiences With Impact.
@@ -142,7 +142,7 @@ export default function LeadershipSection() {
                 {/* Information Col */}
                 <div className="p-8 sm:p-10 flex flex-col justify-between">
                   <div>
-                    <span className="text-xs font-mono font-bold tracking-widest text-[#2563EB] uppercase">Executive Director bio</span>
+                    <span className="text-xs font-mono font-bold tracking-widest text-[#2563EB] uppercase">Leadership bio</span>
                     
                     <div className="mt-4 relative bg-gray-50 border border-gray-100 rounded-2xl p-4 italic text-sm text-gray-600 flex items-start gap-2.5">
                       <Quote size={24} className="text-[#2563EB] shrink-0 opacity-40" />
