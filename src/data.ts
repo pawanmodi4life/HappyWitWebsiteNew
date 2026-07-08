@@ -33,7 +33,7 @@ export const services: Service[] = [
     title: "Creative & AV Production",
     desc: "Next-generation brand storytelling through premium Brand Films, immersive script-to-screen concepts, stunning 2D & 3D visual animatics, and cinematic VFX editing.",
     icon: Film,
-    image: "https://ibb.co/ZRBGMTYk"><img src="https://i.ibb.co/j9ybr4W1/ai-assistant-modern-office-futuristic-technology-workspace-digital-innovation-artificial-inte.jpg?auto=format&fit=crop&w=1200&q=80",
+    image: "https://i.ibb.co/j9ybr4W1/ai-assistant-modern-office-futuristic-technology-workspace-digital-innovation-artificial-inte.jpg?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Exhibition",
