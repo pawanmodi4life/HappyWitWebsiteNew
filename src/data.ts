@@ -192,6 +192,14 @@ export const team: TeamMember[] = [
     desc: "Crafts cinematic narrative arcs, handling video production, AV direction, and post-production for premium brands.",
     skills: ["Creative Production", "AV Direction", "Post Production", "AV Producing", "Corporate Films", "Motion Editing"],
   },
+   {
+    name: "Anoop Chauhan",
+    role: "Master of Event Experience",
+    experience: "30 Years Experience",
+    image: "https://i.ibb.co/B5mHfXZB/Chat-GPT-Image-Jul-10-2026-01-11-19-PM.png",
+    desc: "Experienced experiential leader delivering high-impact corporate events and brand activations.",
+    skills: ["Strategic Leadership", "Client Relations", "Enterprise Growth", "Event Governance", "Risk Mitigation"],
+  },
 ];
 
 export const heroImage = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=85";
