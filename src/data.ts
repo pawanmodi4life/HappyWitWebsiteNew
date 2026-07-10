@@ -196,7 +196,7 @@ export const team: TeamMember[] = [
     name: "Anoop Chauhan",
     role: "Master of Event Experience",
     experience: "30 Years Experience",
-    image: "https://i.ibb.co/B5mHfXZB/Chat-GPT-Image-Jul-10-2026-01-11-19-PM.png",
+    image: "https://i.ibb.co/ynz3vnKq/Whats-App-Image-2026-07-10-at-13-49-56.jpg",
     desc: "Experienced experiential leader delivering high-impact corporate events and brand activations.",
     skills: ["Strategic Leadership", "Client Relations", "Enterprise Growth", "Event Governance", "Risk Mitigation"],
   },
