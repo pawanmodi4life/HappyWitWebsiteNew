@@ -168,6 +168,7 @@ export const team: TeamMember[] = [
     desc: "Transforms ideas into immersive, AI-powered brand experiences through world-class storytelling and creative strategy.",
     skills: ["2D & 3D Strategy", "Storytelling", "Experiential Tech", "Art Direction", "IP Ideation"],
   },
+ /*
   {
     name: "Rahul Tiwari",
     role: "Operations Experience Director",
@@ -176,6 +177,7 @@ export const team: TeamMember[] = [
     desc: "Leads flawless event execution with rigorous operational, budget, and logistical coordination globally.",
     skills: ["Operations", "Budget Management", "Logistics Planning", "Global Execution", "Safety Protocols"],
   },
+  */
   {
     name: "Kulbir Singh",
     role: "Master of Event Experience",
