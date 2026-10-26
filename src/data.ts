@@ -162,7 +162,7 @@ export const experienceCategories = [
 export const team: TeamMember[] = [
   {
     name: "Pawan Modi",
-    role: "Creative Experience Director",
+    role: "Business Lead & Creative Director",
     experience: "15 Years Experience",
     image: "https://i.ibb.co/RpxP0bYL/Chat-GPT-Image-Jun-3-2026-07-33-02-PM.png",
     desc: "Transforms ideas into immersive, AI-powered brand experiences through world-class storytelling and creative strategy.",

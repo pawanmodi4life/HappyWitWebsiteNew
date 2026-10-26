@@ -20,6 +20,7 @@ import ServicesSection from "./components/ServicesSection";
 import ExperienceMap from "./components/ExperienceMap";
 import LeadershipSection from "./components/LeadershipSection";
 import ExperiencePlanner from "./components/ExperiencePlanner";
+import BuyerQuestions from "./components/BuyerQuestions";
 
 // Import Data
 import {
@@ -82,7 +83,7 @@ export default function App() {
           
           {/* Left Hero Block */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -96,7 +97,7 @@ export default function App() {
             </h1>
             
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-gray-500 md:text-xl">
-              We help premium brands design live experiences that engage corporate audiences, strengthen community formats, and turn temporary moments into permanent memories.
+              HappyWit is a New Delhi-based Experience Intelligence Studio for corporate events, exhibitions, creative and AV. We combine human creativity, AI and emotion to connect your brand story with a practical live experience.
             </p>
             
             <div className="mt-10 flex flex-wrap gap-4">
@@ -117,7 +118,7 @@ export default function App() {
 
           {/* Right Hero Block: Immersive Frame */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
             className="relative"
@@ -174,7 +175,7 @@ export default function App() {
               We build experiences <br />that move people.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-gray-500">
-              Most standard agencies focus exclusively on booking tables and executing checklists. HappyWit operates on a higher plane: we synthesize audience emotion, creative storytelling, interactive hardware, and live experience flow to curate events that resonate deeply and generate long-lasting brand conversations.
+              HappyWit brings audience insight, creative storytelling and practical execution together. Our scope includes event concepts, exhibition stall design, 2D/3D design, scripting, AV content, immersive engagement and show calling, shaped around your audience and objectives.
             </p>
             
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -420,6 +421,8 @@ export default function App() {
         </div>
       </section>
 
+      <BuyerQuestions />
+
       {/* 14. Luxury Dark Inquiries & Contact Section */}
       <section id="contact" className="relative px-6 py-20 md:px-12 lg:px-20 bg-gray-950 text-white overflow-hidden">
         {/* Glow Effects inside Contact section */}
@@ -436,7 +439,7 @@ export default function App() {
                   Let's Create<br />Something Remarkable
                 </h2>
                 <p className="mt-5 text-sm text-gray-400">
-                  Every memorable brand experience begins with a single conversation. Inquire with HappyWit Design Studio to build yours.
+                  Every memorable brand experience begins with a single conversation. Talk to HappyWit Events, a New Delhi-based Experience Intelligence Studio, about your audience, objectives and brief.
                 </p>
               </div>
 
