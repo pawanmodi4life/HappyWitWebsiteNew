@@ -39,6 +39,7 @@ export interface SignatureConcept {
 }
 
 export interface TeamMember {
+  linkedin?: string;
   name: string;
   role: string;
   experience: string;

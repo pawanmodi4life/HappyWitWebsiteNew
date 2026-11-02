@@ -94,7 +94,7 @@ export default function LeadershipSection() {
                 </div>
 
                 <div className="mt-5 border-t border-gray-100 pt-4 flex items-center justify-between text-xs font-bold text-[#2563EB] group-hover:text-[#FF9900] transition">
-                  {member.desc ? <span>View Full Profile</span> : <a href="#contact">Contact HappyWit</a>}
+                  {member.desc ? <span>View Full Profile</span> : member.linkedin ? <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`View ${member.name} on LinkedIn`}>View LinkedIn Profile</a> : <a href="#contact">Contact HappyWit</a>}
                   <ArrowUpRight size={15} />
                 </div>
               </div>

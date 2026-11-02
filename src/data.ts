@@ -209,7 +209,8 @@ export const team: TeamMember[] = [
   ...teamProfiles.filter((member) => member.name === "Pawan Modi"),
   {
     name: "Shalu",
-    role: "",
+    role: "Business Owner",
+    linkedin: "https://www.linkedin.com/in/shalu-kumari-7175a9420/",
     experience: "",
     image: "",
     desc: "",
