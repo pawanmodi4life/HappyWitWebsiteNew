@@ -88,7 +88,7 @@ export default function App() {
             transition={{ duration: 0.8 }}
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-black/5 bg-white/90 px-4 py-2 text-xs font-bold text-gray-600 shadow-sm backdrop-blur">
-              <HeartHandshake size={15} className="text-[#2563EB]" /> Human-centered. AI-enhanced. Designed for impact.
+              <HeartHandshake size={15} className="text-[#2563EB]" /> Powered by Human Creativity. Enhanced by AI. Driven by Emotion.
             </div>
             
             <h1 className="font-display text-5xl font-black leading-[1.05] tracking-tight text-gray-900 sm:text-6xl md:text-7xl xl:text-[5.8rem]">
@@ -154,12 +154,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* 3. Service Highlights */}
+      {/* 3. Horizontal Stats Board */}
       <section className="px-6 relative z-10 md:px-12 lg:px-20 -mt-8">
         <div className="mx-auto max-w-7xl rounded-[2rem] border border-black/5 bg-white/90 p-8 shadow-lg backdrop-blur-md grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, i) => (
             <div key={i} className="text-center md:text-left relative after:hidden lg:after:block after:absolute after:right-0 after:top-1/4 after:h-1/2 after:w-px after:bg-gray-100 last:after:hidden">
-              <div className="text-2xl font-black font-display leading-tight tracking-tight text-[#2563EB] md:text-3xl">{stat.value}</div>
+              <div className="text-4xl font-black font-display tracking-tight text-[#2563EB] md:text-5xl">{stat.value}</div>
               <p className="mt-2 text-xs font-bold text-gray-400 uppercase tracking-widest">{stat.label}</p>
             </div>
           ))}

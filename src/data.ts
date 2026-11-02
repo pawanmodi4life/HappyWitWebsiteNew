@@ -101,10 +101,10 @@ export const capabilities: Capability[] = [
 ];
 
 export const stats: Stat[] = [
-  { value: "Events", label: "Corporate experiences & product launches" },
-  { value: "Exhibitions", label: "Stall design & brand experience zones" },
-  { value: "Creative & AV", label: "2D/3D design, scripts & screen content" },
-  { value: "Show Calling", label: "Run of show & live cue coordination" },
+  { value: "15+", label: "Years of Experience" },
+  { value: "500+", label: "Experiences Supported" },
+  { value: "15+", label: "Countries Touched" },
+  { value: "100+", label: "Brands Contributed To" },
 ];
 
 export const footprint: FootprintItem[] = [
