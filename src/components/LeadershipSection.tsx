@@ -48,7 +48,16 @@ export default function LeadershipSection() {
               key={member.name}
               onMouseEnter={() => setHoveredMember(member.name)}
               onMouseLeave={() => setHoveredMember(null)}
-              onClick={() => { if (member.desc) setSelectedMember(member); }}
+              role="button"
+              tabIndex={0}
+              aria-label={`View ${member.name} profile`}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setSelectedMember(member);
+                }
+              }}
+              onClick={() => setSelectedMember(member)}
               className={`group ${member.desc ? "cursor-pointer" : ""} overflow-hidden rounded-3xl border border-gray-100 bg-white p-3 shadow-md transition duration-300 hover:border-[#2563EB]/20 hover:shadow-xl`}
               whileHover={{ y: -8 }}
             >
@@ -106,7 +115,7 @@ export default function LeadershipSection() {
       {/* Interactive Modal Drawer for Selected Leadership Member */}
       <AnimatePresence>
         {selectedMember && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label={`${selectedMember.name} profile`} onKeyDown={(event) => { if (event.key === "Escape") setSelectedMember(null); }}>
             {/* Modal backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -121,7 +130,7 @@ export default function LeadershipSection() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-2xl overflow-hidden rounded-[2.5rem] border border-gray-100 bg-white shadow-2xl z-10"
+              className="relative max-h-[90dvh] w-full max-w-2xl overflow-y-auto rounded-[2.5rem] border border-gray-100 bg-white shadow-2xl z-10"
             >
               {/* Close Button */}
               <button
@@ -134,7 +143,7 @@ export default function LeadershipSection() {
 
               <div className="grid sm:grid-cols-[0.95fr_1.05fr]">
                 {/* Photo Col */}
-                <div className="relative h-64 sm:h-auto bg-gray-900">
+                <div className="relative h-80 sm:h-auto sm:min-h-96 bg-gray-900">
                   <ProfilePortrait member={selectedMember} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                   <div className="absolute bottom-6 left-6 text-white">
@@ -157,7 +166,7 @@ export default function LeadershipSection() {
                     </div>}
 
                     {selectedMember.skills.length > 0 && <div className="mt-6">
-                      <h5 className="text-xs font-bold uppercase tracking-wider text-gray-400">Core Domain Expertise</h5>
+                      <h5 className="text-xs font-bold uppercase tracking-wider text-gray-400">Areas of Focus</h5>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {selectedMember.skills.map((skill) => (
                           <span
@@ -171,13 +180,16 @@ export default function LeadershipSection() {
                     </div>}
                   </div>
 
-                  <div className="mt-8 border-t border-gray-100 pt-5 flex items-center justify-between">
+                  <div className="mt-8 border-t border-gray-100 pt-5 flex flex-wrap gap-4 items-center justify-between">
                     <a
                       href="mailto:hello@happywitevents.com"
                       className="inline-flex items-center gap-2 text-sm font-bold text-[#111827] hover:text-[#2563EB] transition"
                     >
                       <Mail size={16} /> Contact Office
                     </a>
+                    {selectedMember.linkedin && (
+                      <a href={selectedMember.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#2563EB]">LinkedIn Profile</a>
+                    )}
                     <button
                       onClick={() => setSelectedMember(null)}
                       className="rounded-full border border-gray-200 px-5 py-2 text-xs font-semibold text-gray-500 hover:bg-gray-50"

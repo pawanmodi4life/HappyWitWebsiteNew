@@ -101,10 +101,10 @@ export const capabilities: Capability[] = [
 ];
 
 export const stats: Stat[] = [
-  { value: "100+", label: "Years of Collective Experience" },
-  { value: "500+", label: "Experiences Supported" },
-  { value: "15+", label: "Countries Touched" },
-  { value: "100+", label: "Brands Contributed To" },
+  { value: "Events", label: "Corporate experiences & product launches" },
+  { value: "Exhibitions", label: "Stall design & brand experience zones" },
+  { value: "Creative & AV", label: "2D/3D design, scripts & screen content" },
+  { value: "Show Calling", label: "Run of show & live cue coordination" },
 ];
 
 export const footprint: FootprintItem[] = [
@@ -208,13 +208,13 @@ const teamProfiles: TeamMember[] = [
 export const team: TeamMember[] = [
   ...teamProfiles.filter((member) => member.name === "Pawan Modi"),
   {
-    name: "Shalu",
-    role: "Business Owner",
+    name: "Shalu Kumari",
+    role: "Proprietor & Business Owner",
     linkedin: "https://www.linkedin.com/in/shalu-kumari-7175a9420/",
     experience: "",
-    image: "/images/team/shalu.webp",
-    desc: "",
-    skills: [],
+    image: "/images/team/shalu-professional.webp",
+    desc: "Shalu Kumari is the proprietor and legal owner of HappyWit. Her role anchors the studio’s business identity, with a focus on building a trusted, sustainable company. Together with Pawan Modi, Business Lead & Creative Director, she supports HappyWit’s vision of experiences shaped by human creativity, AI and emotion.",
+    skills: ["Business Ownership", "Company Vision", "Values & Trust"],
   },
 ];
 
