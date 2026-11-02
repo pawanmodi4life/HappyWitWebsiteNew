@@ -159,7 +159,7 @@ export const experienceCategories = [
   "Community & Culture Experiences",
 ];
 
-export const team: TeamMember[] = [
+const teamProfiles: TeamMember[] = [
   {
     name: "Pawan Modi",
     role: "Business Lead & Creative Director",
@@ -201,6 +201,19 @@ export const team: TeamMember[] = [
     image: "https://i.ibb.co/ynz3vnKq/Whats-App-Image-2026-07-10-at-13-49-56.jpg",
     desc: "Experienced experiential leader delivering high-impact corporate events and brand activations.",
     skills: ["Strategic Leadership", "Client Relations", "Enterprise Growth", "Event Governance", "Risk Mitigation"],
+  },
+];
+
+// Keep other profiles in source, but do not display them publicly.
+export const team: TeamMember[] = [
+  ...teamProfiles.filter((member) => member.name === "Pawan Modi"),
+  {
+    name: "Shalu",
+    role: "",
+    experience: "",
+    image: "",
+    desc: "",
+    skills: [],
   },
 ];
 
