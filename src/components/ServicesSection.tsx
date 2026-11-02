@@ -66,7 +66,7 @@ export default function ServicesSection() {
               key={item.title}
               onClick={() => setSelectedService(item)}
               className="group relative h-full flex flex-col justify-between overflow-hidden rounded-[2rem] border border-gray-100 bg-white p-3 shadow-md cursor-pointer transition hover:-translate-y-2 hover:shadow-xl hover:border-[#2563EB]/15"
-              initial={{ opacity: 0, y: 15 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
             >

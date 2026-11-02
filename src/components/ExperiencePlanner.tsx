@@ -269,7 +269,7 @@ export default function ExperiencePlanner() {
 
       {/* Steps Render */}
       <div className="relative z-10 min-h-[300px]">
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false} mode="wait">
           {step === 1 && (
             <motion.div
               key="step1"
