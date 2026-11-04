@@ -172,7 +172,7 @@ const teamProfiles: TeamMember[] = [
     name: "Rahul Tiwari",
     role: "Operations Experience Director",
     experience: "20 Years Experience",
-    image: "https://i.ibb.co/vxyYyJhS/1748581806843.jpg",
+    image: "/images/team/rahul-tiwari.webp",
     desc: "Leads flawless event execution with rigorous operational, budget, and logistical coordination globally.",
     skills: ["Operations", "Budget Management", "Logistics Planning", "Global Execution", "Safety Protocols"],
   },
