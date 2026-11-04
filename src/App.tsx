@@ -17,6 +17,7 @@ import {
 
 // Import Custom Modular Components
 import ServicesSection from "./components/ServicesSection";
+import HeroCarousel from "./components/HeroCarousel";
 import ExperienceMap from "./components/ExperienceMap";
 import LeadershipSection from "./components/LeadershipSection";
 import ExperiencePlanner from "./components/ExperiencePlanner";
@@ -29,7 +30,6 @@ import {
   stats,
   signatureConcepts,
   experienceCategories,
-  heroImage,
   aboutImage,
   footerImage,
   imageTone,
@@ -73,84 +73,31 @@ export default function App() {
         </nav>
       </header>
 
-      {/* 2. Experiential Hero Section */}
-      <section className="relative flex min-h-[90vh] flex-col justify-center px-6 py-12 md:px-12 lg:px-20 overflow-hidden">
-        {/* Glow Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(37,99,235,0.08),transparent_35%),radial-gradient(circle_at_85%_30%,rgba(255,153,0,0.10),transparent_35%),radial-gradient(circle_at_50%_90%,rgba(14,165,233,0.08),transparent_40%)] pointer-events-none" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px] opacity-40 pointer-events-none" />
+      {/* 2. Full-bleed brand experience carousel */}
+      <HeroCarousel />
 
-        <div className="mx-auto max-w-7xl relative z-10 grid gap-14 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          
-          {/* Left Hero Block */}
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-black/5 bg-white/90 px-4 py-2 text-xs font-bold text-gray-600 shadow-sm backdrop-blur">
-              <HeartHandshake size={15} className="text-[#2563EB]" /> Powered by Human Creativity. Enhanced by AI. Driven by Emotion.
-            </div>
-            
-            <h1 className="font-display text-5xl font-black leading-[1.05] tracking-tight text-gray-900 sm:text-6xl md:text-7xl xl:text-[5.8rem]">
-              Create Experiences <br className="hidden md:block" />
-              <span className="bg-gradient-to-r from-[#2563EB] via-indigo-600 to-[#FF9900] bg-clip-text text-transparent">People Remember</span>
-            </h1>
-            
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-gray-500 md:text-xl">
-              HappyWit is a New Delhi-based Experience Intelligence Studio for corporate events, exhibitions, creative and AV. We combine human creativity, AI and emotion to connect your brand story with a practical live experience.
-            </p>
-            
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#planner"
-                className="inline-flex items-center justify-center rounded-full bg-gray-900 px-7 py-4 text-sm font-bold text-white shadow-md transition duration-300 hover:bg-[#2563EB] hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                Plan Your Event <ArrowRight className="ml-2" size={16} />
-              </a>
-              <a
-                href="#services"
-                className="inline-flex items-center justify-center rounded-full border border-black/5 bg-white/90 px-7 py-4 text-sm font-bold text-gray-600 shadow-sm transition duration-300 hover:bg-gray-50 hover:-translate-y-0.5"
-              >
-                Our Capabilities
-              </a>
-            </div>
-          </motion.div>
-
-          {/* Right Hero Block: Immersive Frame */}
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="relative"
-          >
-            <div className="relative mx-auto overflow-hidden rounded-[2.5rem] border border-black/5 bg-white p-3 shadow-2xl">
-              <div className="relative overflow-hidden rounded-[1.8rem] aspect-[4/5]">
-                <img
-                  src={heroImage}
-                  alt="Immersive corporate event and lighting showcase"
-                  className={`h-full w-full object-cover ${imageTone}`}
-                  loading="eager"
-                />
-                <div className={brandOverlay} />
-              </div>
-              
-              {/* Floating Hero Badge */}
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/40 bg-white/85 p-5 shadow-lg backdrop-blur-md">
-                <div className="flex items-start gap-3.5">
-                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#EEF3FF] text-[#2563EB] shadow-sm">
-                    <Lightbulb size={22} className="animate-pulse" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-mono font-bold uppercase tracking-wider text-gray-400">Experience Strategy</div>
-                    <div className="mt-0.5 text-base font-black text-gray-900">
-                      Emotional design over simple logistics.
-                    </div>
-                  </div>
+      {/* Three connected pillars of the HappyWit philosophy */}
+      <section aria-label="Our creative philosophy" className="overflow-hidden bg-[#07132D] px-6 py-20 text-white md:px-12 lg:px-20">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#FF9900]">Our philosophy, in three dimensions</p>
+          <h2 className="mt-4 max-w-3xl font-display text-3xl font-black leading-tight tracking-tight md:text-5xl">Ideas begin with people. Technology expands them. Emotion makes them last.</h2>
+          <div className="mt-12 grid gap-5 md:grid-cols-3 [perspective:1200px]">
+            {[
+              { n: "01", title: "Human Creativity", copy: "The original thought. The strategic insight. The story only people can tell.", gradient: "from-[#1752C9]/45 via-[#1752C9]/10 to-white/5" },
+              { n: "02", title: "Enhanced by AI", copy: "More intelligent possibilities, shaped by human judgment and creative intent.", gradient: "from-[#7253DC]/40 via-[#1752C9]/10 to-white/5" },
+              { n: "03", title: "Driven by Emotion", copy: "The connection that turns a moment into a lasting brand memory.", gradient: "from-[#FF9900]/35 via-[#1752C9]/10 to-white/5" },
+            ].map((pillar) => (
+              <div key={pillar.n} tabIndex={0} className={`group relative isolate min-h-[280px] overflow-hidden rounded-[2rem] border border-white/15 bg-gradient-to-br ${pillar.gradient} p-8 shadow-2xl transition-transform duration-500 hover:[transform:rotateY(-4deg)_rotateX(3deg)_translateY(-8px)] focus-visible:[transform:translateY(-5px)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#FF9900] motion-reduce:transform-none`}>
+                <div aria-hidden="true" className="absolute -right-12 -top-12 h-52 w-52 rounded-full border border-white/15 bg-white/5 shadow-[inset_0_0_45px_rgba(255,255,255,.08)] transition-transform duration-700 group-hover:translate-x-3 group-hover:translate-y-4 group-hover:rotate-12" />
+                <div aria-hidden="true" className="absolute right-10 top-20 h-24 w-24 rotate-45 rounded-2xl border border-white/15 bg-white/5 backdrop-blur-sm transition-transform duration-700 group-hover:rotate-90" />
+                <div className="relative flex h-full flex-col justify-end">
+                  <span className="mb-auto font-mono text-xs font-bold tracking-[0.2em] text-[#FFB04D]">{pillar.n} / 03</span>
+                  <h3 className="font-display text-2xl font-black tracking-tight md:text-3xl">{pillar.title}</h3>
+                  <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/75">{pillar.copy}</p>
                 </div>
               </div>
-            </div>
-          </motion.div>
-
+            ))}
+          </div>
         </div>
       </section>
 

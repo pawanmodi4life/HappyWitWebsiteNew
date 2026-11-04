@@ -168,8 +168,7 @@ const teamProfiles: TeamMember[] = [
     desc: "Transforms ideas into immersive, AI-powered brand experiences through world-class storytelling and creative strategy.",
     skills: ["2D & 3D Strategy", "Storytelling", "Experiential Tech", "Art Direction", "IP Ideation"],
   },
- /*
-  {
+ {
     name: "Rahul Tiwari",
     role: "Operations Experience Director",
     experience: "20 Years Experience",
@@ -177,7 +176,6 @@ const teamProfiles: TeamMember[] = [
     desc: "Leads flawless event execution with rigorous operational, budget, and logistical coordination globally.",
     skills: ["Operations", "Budget Management", "Logistics Planning", "Global Execution", "Safety Protocols"],
   },
-  */
   {
     name: "Kulbir Singh",
     role: "Master of Event Experience",
@@ -204,19 +202,8 @@ const teamProfiles: TeamMember[] = [
   },
 ];
 
-// Keep other profiles in source, but do not display them publicly.
-export const team: TeamMember[] = [
-  ...teamProfiles.filter((member) => member.name === "Pawan Modi"),
-  {
-    name: "Shalu Kumari",
-    role: "Proprietor & Business Owner",
-    linkedin: "https://www.linkedin.com/in/shalu-kumari-7175a9420/",
-    experience: "",
-    image: "/images/team/shalu-professional.webp",
-    desc: "Shalu Kumari is the proprietor and legal owner of HappyWit. Her role anchors the studio’s business identity, with a focus on building a trusted, sustainable company. Together with Pawan Modi, Business Lead & Creative Director, she supports HappyWit’s vision of experiences shaped by human creativity, AI and emotion.",
-    skills: ["Business Ownership", "Company Vision", "Values & Trust"],
-  },
-];
+// The public leadership section uses approved existing profiles; Shalu is not displayed.
+export const team: TeamMember[] = teamProfiles;
 
 export const heroImage = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=85";
 export const aboutImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80";
