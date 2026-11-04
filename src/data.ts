@@ -188,7 +188,7 @@ const teamProfiles: TeamMember[] = [
     name: "Saurabh Sharma",
     role: "Chief Editor & Producer",
     experience: "15 Years Experience",
-    image: "https://i.ibb.co/6Jr1vkJs/Whats-App-Image-2026-07-02-at-7-04-21-PM.jpg",
+    image: "/images/team/saurabh-sharma.jpg",
     desc: "Crafts cinematic narrative arcs, handling video production, AV direction, and post-production for premium brands.",
     skills: ["Creative Production", "AV Direction", "Post Production", "AV Producing", "Corporate Films", "Motion Editing"],
   },
