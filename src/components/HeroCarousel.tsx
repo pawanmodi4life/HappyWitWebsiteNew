@@ -7,7 +7,8 @@ const slides = [
     title: "Moments that move people.",
     accent: "Events",
     description: "From leadership gatherings to landmark launches — human stories, considered details, and effortless execution.",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2400&q=85",
+    image: "/images/hero/home-events-stage.webp",
+    fallbackImage: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2400&q=85",
     alt: "Real audience immersed in a beautifully lit live event",
     cta: "Explore event experiences",
     href: "#services",
@@ -18,7 +19,8 @@ const slides = [
     title: "Designed to stop traffic.",
     accent: "Exhibitions",
     description: "Purposeful exhibition spaces where architecture, product stories and interaction turn attention into meaningful conversations.",
-    image: "https://i.ibb.co/mr7NBq6G/66755.jpg",
+    image: "/images/hero/home-exhibition-booth.webp",
+    fallbackImage: "https://i.ibb.co/mr7NBq6G/66755.jpg",
     alt: "Realistic exhibition booth design and brand presentation",
     cta: "Explore exhibitions",
     href: "#services",
@@ -29,7 +31,8 @@ const slides = [
     title: "Make every frame matter.",
     accent: "Creative & AV",
     description: "Concepts, films, 2D and 3D content, and show visuals composed to make your brand impossible to forget.",
-    image: "https://images.unsplash.com/photo-1757845524683-611470b2d7ce?auto=format&fit=crop&w=2400&q=85",
+    image: "/images/hero/home-creative-av-control.webp",
+    fallbackImage: "https://images.unsplash.com/photo-1757845524683-611470b2d7ce?auto=format&fit=crop&w=2400&q=85",
     alt: "Professional camera and edit suite used for creative and AV production",
     cta: "Explore creative production",
     href: "#services",
@@ -40,7 +43,8 @@ const slides = [
     title: "The feeling is the point.",
     accent: "Experience HappyWit",
     description: "Powered by Human Creativity. Enhanced by AI. Driven by Emotion.",
-    image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=2400&q=85",
+    image: "/images/hero/home-video-poster.webp",
+    fallbackImage: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&fit=crop&w=2400&q=85",
     alt: "Immersive brand experience stage lighting",
     cta: "Start a conversation",
     href: "#contact",
@@ -48,13 +52,15 @@ const slides = [
   },
 ] as const;
 
-// A publicly accessible brand-film URL can be set in Vercel as VITE_BRAND_FILM_URL.
-// Until then the fourth slide retains a finished image-based presentation.
-const brandFilmUrl = import.meta.env.VITE_BRAND_FILM_URL || "";
+// Approved brand film. An environment URL can override the bundled static film if needed.
+// The picture fallback remains visible until the uploaded film is deployed.
+const brandFilmUrl = import.meta.env.VITE_BRAND_FILM_URL || "/videos/happywit-brand-introduction.mp4";
 
 export default function HeroCarousel() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [filmUnavailable, setFilmUnavailable] = useState(false);
+  const [showFilm, setShowFilm] = useState(false);
 
   useEffect(() => {
     if (paused) return;
@@ -85,22 +91,27 @@ export default function HeroCarousel() {
           className={"absolute inset-0 transition-opacity duration-1000 ease-in-out " + (i === active ? "opacity-100 z-10" : "opacity-0 pointer-events-none z-0")}
           aria-hidden={i !== active}
         >
-          {slide.type === "video" && brandFilmUrl && i === active ? (
+          {slide.type === "video" && !filmUnavailable && i === active ? (
             <video
               className="absolute inset-0 h-full w-full object-cover"
-              controls
+              autoPlay
+              muted
+              loop
               playsInline
               preload="metadata"
+              onError={() => setFilmUnavailable(true)}
               poster={slide.image}
               src={brandFilmUrl}
-              onPlay={() => setPaused(true)}
-              onPause={() => setPaused(false)}
+
               aria-label="HappyWit brand introduction film"
             />
           ) : (
             <img
               src={slide.image}
               alt={slide.alt}
+              onError={(event) => {
+                if (event.currentTarget.src !== slide.fallbackImage) event.currentTarget.src = slide.fallbackImage;
+              }}
               className="absolute inset-0 h-full w-full object-cover object-center"
               loading={i === 0 ? "eager" : "lazy"}
               fetchPriority={i === 0 ? "high" : "auto"}
@@ -125,8 +136,8 @@ export default function HeroCarousel() {
             <a href={current.href} className="inline-flex items-center gap-2 rounded-full bg-[#1752C9] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#2D68E0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
               {current.cta} <ArrowUpRight size={17} />
             </a>
-            {active === 3 && brandFilmUrl && (
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-white/75"><Play size={16} /> Play the brand film above</span>
+            {active === 3 && !filmUnavailable && (
+              <button type="button" onClick={() => { setPaused(true); setShowFilm(true); }} className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"><Play size={16} /> Watch with sound</button>
             )}
           </div>
         </div>
@@ -156,6 +167,12 @@ export default function HeroCarousel() {
           <button type="button" onClick={() => goTo(active + 1)} aria-label="Next slide" className="grid h-11 w-11 place-items-center rounded-full border border-white/40 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/25"><ArrowRight size={19} /></button>
         </div>
       </div>
+      {showFilm && !filmUnavailable && (
+        <div className="fixed inset-0 z-[100] grid place-items-center bg-black/95 p-3 md:p-8" role="dialog" aria-modal="true" aria-label="HappyWit brand introduction film" onKeyDown={(event) => { if (event.key === "Escape") { setShowFilm(false); setPaused(false); } }}>
+          <button type="button" className="absolute right-5 top-5 rounded-full border border-white/30 bg-black/60 px-5 py-2 text-sm font-bold text-white transition hover:bg-white/20" onClick={() => { setShowFilm(false); setPaused(false); }}>Close film ✕</button>
+          <video autoPlay controls playsInline className="max-h-[83vh] w-full max-w-6xl rounded-xl object-contain" src={brandFilmUrl} poster={slides[3].image} onError={() => { setFilmUnavailable(true); setShowFilm(false); setPaused(false); }} />
+        </div>
+      )}
     </section>
   );
 }
