@@ -40,7 +40,7 @@ export default function LeadershipSection() {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-3xl grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {team.map((member) => {
           const isHovered = hoveredMember === member.name;
           return (
