@@ -38,7 +38,7 @@ The output contains the homepage, `robots.txt` and `sitemap.xml`. The sitemap li
 only the live homepage; it must not include fragment links or unpublished routes.
 
 Before promoting a deployment, verify that the raw homepage HTML contains its H1,
-business description, six buyer questions, contact information, one canonical link,
+business description, buyer questions, contact information, one canonical link,
 one meta description and the Organization JSON-LD. Confirm the robots and sitemap
 URLs return 200 and that the interactive planner still works without hydration errors.
 
