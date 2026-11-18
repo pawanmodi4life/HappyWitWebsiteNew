@@ -12,27 +12,27 @@ export default function ServicesSection() {
     switch (title) {
       case "Corporate & Brand Experiences":
         return {
-          whatWeOffer: "End-to-end concept design, production, and seamless physical-digital execution for high-profile Product Launches, interactive Town Halls, key executive Leadership Meets, and energetic Employee Meets. We design custom themes, spatial stages, visual timelines, and high-impact key reveals that dissolve corporate stiffness and generate active participant memories.",
-          aiAndHuman: "Our master storytellers design the core emotional narrative and spatial aesthetics, while custom AI-driven semantic onboarding algorithms analyze guest profiles beforehand to suggest targeted group icebreakers, custom seating micro-dynamics, and personalized greeting journeys.",
-          techs: ["NFC attendee smart badges", "Real-time interactive audience polling and sentiment grids", "Integrated multi-camera live broadcast arrays", "Dynamic kinetic LED stage facades"]
+          whatWeOffer: "HappyWit develops corporate event and product launch concepts around your audience, message and objectives. The agreed scope can include the theme, guest journey, stage and screen design, invitations, presentation content, engagement ideas and show flow. Share the date, city, guest count, venue status and budget to define the creative and production requirements.",
+          aiAndHuman: "Human insight shapes the story and the moments guests take part in. AI can support early concept exploration, content drafts and personalised engagement ideas, with the creative team reviewing the work against the brief.",
+          techs: ["QR registration and digital check-in", "Live audience polls", "Interactive screens and engagement zones", "AI-assisted photo experiences"]
         };
       case "Creative & AV Production":
         return {
-          whatWeOffer: "Next-generation brand storytelling through custom Brand Films, 2D & 3D scenic animatics, high-impact event openers, script-to-screen concepts, and post-production VFX editing. We write, direct, design, and render cinematic assets tailored specifically for ultra-wide, high-resolution stage displays.",
-          aiAndHuman: "Human directors lead the creative framing, character emotional journeys, and poetic scripts, while AI diffusion systems and neural rendering models speed up look-development, restore high-frequency details, and generate complex textured backdrops on the fly.",
-          techs: ["Ultra-wide custom stage motion graphics", "3D stereoscopic projection overlays", "Dynamic real-time visual synthesizers", "Dolby Atmos localized surround-sound masters"]
+          whatWeOffer: "Creative and AV production connects the event message with the content guests see and hear. HappyWit's scope can include concepts, scripts, storyboards, voiceover coordination, brand films, event openers, motion graphics, 2D/3D visuals and video editing. Screen dimensions, duration, language, available footage, approvals and delivery formats shape the production plan.",
+          aiAndHuman: "Human creative direction leads the script, visual treatment and edit. AI can help explore visual directions and develop selected content elements, with review for brand fit and consistency before delivery.",
+          techs: ["Motion graphics for event LED screens", "2D/3D visualisation and animation", "AI-assisted visual development", "Video edits and screen-format adaptations"]
         };
       case "Exhibition":
         return {
-          whatWeOffer: "Architectural spatial planning, custom engineering, and physical building of immersive Exhibition Booths, interactive product pavilions, and sensory-driven modular zones. We craft fluid organic walkthroughs that break the standard rigid square layouts, driving visitors through curated curiosity loops and maximized dwell time.",
-          aiAndHuman: "Our physical architects craft elegant geometries and material selections using premium physical styling, while AI spatial simulation models analyze crowd-flow density and predict footpaths to optimize touchpoint ergonomics and visual highlights.",
-          techs: ["RFID/NFC product-discovery pedestals", "Interactive touch-table directories", "Integrated spatial audio hotspots", "Proximity-sensing micro-LED displays"]
+          whatWeOffer: "HappyWit plans exhibition stalls around the stand dimensions, open sides, organiser rules and products on display. The scope can include layouts, 3D concepts, brand graphics, demo zones, AV content, meeting areas and fabrication. For technology brands, the design can connect a product demonstration with an explanation area and a place for sales conversations. Confirm materials, power and AV needs, approvals, installation and dismantling responsibilities in the proposal.",
+          aiAndHuman: "The design team leads spatial planning, product storytelling and material choices. AI can support concept exploration and visual development. Layout decisions follow the actual stand plan, organiser requirements and practical production review.",
+          techs: ["Touchscreen product explainers", "Digital product demonstration content", "AR or AI engagement concepts", "QR access to product information"]
         };
       case "Event Show Running":
         return {
-          whatWeOffer: "The ultimate live command-center flow. We orchestrate split-second stage timing, multi-feed speaker cue coordination, theatrical light & sound transitions, and immediate failover backup plays. We ensure that live presentations are absolute masterpieces of stress-free theatrical execution.",
-          aiAndHuman: "The human show-director brings live emotional instincts, cueing timing, and creative stage presence, while automated AI scheduling engines and neural background noise-filtering headsets allow our stage crew to coordinate flawlessly without a millisecond of lag.",
-          techs: ["Multi-display synchronized playback servers", "DMX-over-Ethernet unified light consoles", "Real-time decibel room-applause meters", "Redundant hot-swap backup media nodes"]
+          whatWeOffer: "Show calling brings the agenda, speakers, performers and technical cues into one run of show. HappyWit can support cue sheets, rehearsal planning, speaker transitions and live coordination across video, sound, lighting and stage teams. Share the agenda, content list, technical plan and rehearsal window so responsibilities and backup cues can be agreed.",
+          aiAndHuman: "The show caller makes the live timing decisions and communicates cues with the crew. Digital planning tools and AI-assisted document preparation can support the process, with the final cue sequence reviewed and rehearsed by the people running the show.",
+          techs: ["Digital run-of-show and cue sheets", "Presentation and video playback planning", "Crew communication and rehearsal cues", "Backup playback and contingency planning"]
         };
       default:
         return {
@@ -53,7 +53,7 @@ export default function ServicesSection() {
           Designed for brands that want<br />to be felt, not just seen.
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">
-          From high-impact Corporate & Brand Experiences and next-generation Creative & AV Production to immersive Exhibitions and seamless Event Show Running, we shape every touchpoint around audience emotion and lasting memory.
+          HappyWit is a New Delhi-based studio for corporate events, exhibition stall design and fabrication, creative AV and show calling. We connect the concept, content and production plan around your audience, venue and objectives.
         </p>
       </div>
 
@@ -95,7 +95,7 @@ export default function ServicesSection() {
                   <h3 className="font-display text-xl font-black leading-tight text-gray-900 group-hover:text-[#2563EB] transition">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-xs leading-relaxed text-gray-500 line-clamp-3">
+                  <p className="mt-3 text-xs leading-relaxed text-gray-500">
                     {item.desc}
                   </p>
                 </div>
@@ -179,7 +179,7 @@ export default function ServicesSection() {
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 flex items-center gap-2">
                       <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-100 text-[10px] font-bold text-green-600">⚡</span>
-                      Technology Integration
+                      Technology and delivery options
                     </h4>
                     <ul className="mt-3 grid gap-2 sm:grid-cols-2">
                       {details.techs.map((tech, idx) => (

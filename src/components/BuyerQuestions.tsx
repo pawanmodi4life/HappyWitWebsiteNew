@@ -20,6 +20,22 @@ const questions = [
     answer: "AV content includes films, motion graphics, presentations, scripts and screen content that carry the event story. Show calling coordinates the live sequence of speaker, video, audio, lighting and stage cues through an agreed run of show, rehearsals and clear communication with the technical team.",
   },
   {
+    question: "How do I choose an exhibition stall design agency in Delhi NCR?",
+    answer: "Compare agencies against the same brief, including the exhibition, stand size, open sides, organiser rules, products, city, dates and budget. Review relevant designs, material specifications and production responsibilities. Ask each proposal to identify fabrication, transport, installation, AV, electrical work, approvals and dismantling so you can compare the scope and exclusions clearly. HappyWit is based in New Delhi and can discuss the design and execution requirements for your brief.",
+  },
+  {
+    question: "What should a technology exhibition booth include?",
+    answer: "Start with the product you want visitors to understand and the conversation you want them to have. Plan visible branding, a clear product explanation, a working demonstration area and space for sales discussions. Confirm power, connectivity, equipment dimensions, ventilation, security and AV requirements with the product team. The layout should let people watch a demo and speak to a representative without blocking circulation.",
+  },
+  {
+    question: "What information does HappyWit need for an event proposal?",
+    answer: "Share your objectives, audience, guest count, event format, city, dates, venue status, budget range and approval timeline. Include the services you need, such as concept development, stage design, AV content, registration, engagement or show calling. For exhibitions, add the organiser's stand plan and rules. HappyWit can then define the deliverables, production responsibilities and assumptions for the proposal.",
+  },
+  {
+    question: "What affects the cost of a corporate event or exhibition stall?",
+    answer: "Cost depends on the scope, location, duration, guest count or stand size, design complexity, materials, content and technical requirements. Compare itemised proposals that identify venue charges, fabrication, logistics, AV, staffing, taxes and exclusions where applicable. Share your budget range early so the proposed experience and production scope can be planned together.",
+  },
+  {
     question: "What is Return on Experiences (ROX) in events?",
     answer: "HappyWit uses ROX to consider anticipation before the event, engagement during it, and memory and action afterwards. Agree measures such as relevant registrations, participation, demo completion, recall and qualified follow-up against the objective. ROX complements financial ROI; these measures are a planning framework, not a promise of results.",
   },
