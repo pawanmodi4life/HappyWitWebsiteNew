@@ -1,7 +1,11 @@
 import {StrictMode} from 'react';
 import {createRoot, hydrateRoot} from 'react-dom/client';
 import App from './App.tsx';
+import {initContactTracking} from './contactTracking';
 import './index.css';
+
+const stopContactTracking = initContactTracking();
+import.meta.hot?.dispose(stopContactTracking);
 
 const root = document.getElementById('root')!;
 const app = (
